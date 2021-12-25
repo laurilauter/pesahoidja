@@ -1,0 +1,503 @@
+/* CSS DEBUGGER 
+
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+
+*/
+/*COLORS*/
+/*navbar and (footer)*/
+/* background*/
+/*text colors*/
+/*fonts*/
+/*controls*/
+/*other stuff*/
+/*
+$testborder: 1px solid rgb(204, 31, 31);
+*/
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
+
+* {
+  box-sizing: border-box; }
+
+h1 {
+  font-family: "Heebo", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 400; }
+
+h2 {
+  font-family: "Heebo", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 400; }
+
+h3 {
+  font-family: "Heebo", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400; }
+
+h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400; }
+
+p, ul, a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem; }
+
+.mid-p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem; }
+
+.small-p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8rem; }
+
+.bold {
+  font-weight: 600; }
+
+.bolder {
+  font-weight: 900; }
+
+.green {
+  color: #006738; }
+
+a:link {
+  color: #58585B;
+  text-decoration: none; }
+
+a:hover {
+  color: silver;
+  text-decoration: none; }
+
+.h-color {
+  color: black; }
+
+/* Navbar logo 
+.brand {
+  margin-left: 10px;
+  margin-top: 3px;
+}
+*/
+.desktop {
+  margin-top: 10px;
+  display: inline-block; }
+
+/* hide mobile version by default */
+.mobile {
+  display: none; }
+
+.hidable {
+  margin-top: 50px; }
+
+/* when screen is less than 600px wide
+  show mobile version and hide desktop */
+@media (max-width: 700px) {
+  .mobile {
+    margin-top: 6px;
+    margin-left: 3px;
+    display: inline-block; }
+
+  .desktop {
+    display: none; }
+
+  .hidable {
+    margin-top: 0px; } }
+/* NAVBAR */
+/* Add a background color to the top navigation */
+.topnav {
+  opacity: 1;
+  background-color: white;
+  overflow: hidden;
+  margin-top: 0vw;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
+
+/* Style the links inside the navigation bar */
+.topnav a:not(:first-child) {
+  float: right;
+  color: #58585B;
+  text-align: center;
+  margin-right: 16px;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 1.6rem; }
+
+/* Change the color of links on hover */
+.topnav a:hover:not(:first-child) {
+  background-color: transparent;
+  color: #f7931d; }
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white; }
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none; }
+
+/* When the screen is less than 800 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child) {
+    display: none; }
+
+  .topnav a.icon {
+    margin-top: 3px;
+    margin-right: 3px;
+    float: right;
+    display: block; } }
+/* The "responsive" class is added to the topnav with JavaScript 
+when the user clicks on the icon. This class makes the topnav 
+look good on small screens (display the links vertically instead 
+of horizontally) */
+@media screen and (max-width: 700px) {
+  .topnav.responsive {
+    position: relative; }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left; } }
+/* jumbotron */
+.container-jumbo {
+  z-index: 0;
+  /*
+  margin-top: 0vw;
+  */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding: 5vh;
+  min-height: 100vh;
+  background-color: white;
+  position: relative;
+  background-image: url("../../static/img/house_hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.h-color {
+  animation-name: example;
+  animation-duration: 2s;
+  opacity: 1;
+  color: #E6E7E8; }
+
+@keyframes example {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 1; } }
+.inner-jumbo {
+  color: #E6E7E8;
+  /*
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  */
+  text-align: center; }
+
+.btn {
+  width: 100%;
+  margin-top: 10px;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #f7931d;
+  border: 1px solid grey;
+  padding: 16px 32px;
+  text-decoration: none;
+  color: #404040; }
+
+.btn-jumbo {
+  width: fit-content; }
+
+.btn:active {
+  background-color: #fdfae2; }
+
+/* ----------------------- TEENUSED------------------ */
+.container-teenused {
+  padding: 5vh;
+  background-color: whitesmoke;
+  flex-flow: column;
+  justify-content: center;
+  border: none; }
+
+.textblock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: none; }
+
+.textblock-inner {
+  max-width: 800px;
+  text-align: center;
+  border: none; }
+
+.box {
+  /*
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none; }
+
+.bow {
+  padding: 2vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.bob {
+  min-width: 300px;
+  padding: 2vw; }
+
+.slim {
+  max-width: 500px; }
+
+.bob img {
+  height: auto;
+  width: 100%; }
+
+/* Container for flexboxes */
+.row {
+  /*
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border: none; }
+
+/*
+.row-rev {
+  flex-direction: row-reverse;
+  border: $testborder;
+}
+*/
+/*
+
+
+.row-key {
+  max-width: 70vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  border: $testborder;
+}
+
+.col-key {
+  padding: 5vw;
+  text-align: center;
+  max-width: 600px;
+  
+}
+
+*/
+/* Create 2 equal columns */
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border: none; }
+
+/*
+
+.b-left {
+  max-width: 70vh;
+  text-align: center;
+  margin:0 auto;
+  
+  border: $testborder;
+}
+
+.b-right {
+  padding-top: auto;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  text-align: center;
+  margin:0 auto;
+
+  border: $testborder;
+}
+*/
+.list {
+  text-align: left; }
+
+/* JUTT */
+/*  MEIST */
+.container-meist {
+  background-color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card {
+  background-color: white;
+  /* Add shadows to create the "card" effect 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  */ }
+
+.card img {
+  height: 100%;
+  width: auto; }
+
+/* Add some padding inside the card container */
+.container-card {
+  padding: 10px;
+  min-height: 300px; }
+
+.row-card {
+  max-width: 80vw;
+  justify-content: space-evenly; }
+
+.col-card {
+  max-width: 300px;
+  margin: 5vw;
+  text-align: center; }
+
+.pad-top {
+  padding-top: 50px; }
+
+/* -----------------  kontakt -----------------*/
+.container-kontakt {
+  color: #58585B;
+  width: 100%;
+  padding: 2vh;
+  background-color: whitesmoke; }
+
+.col-con {
+  padding: 1vh;
+  width: 60vh; }
+
+.box-con {
+  margin-top: 10vh;
+  vertical-align: middle;
+  border: none; }
+
+.kontakt {
+  width: 40vh; }
+
+/* form style */
+textarea {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  padding: 12px 12px;
+  margin: 8px 0; }
+
+input[type=text], [type=email], [type=number], [type=tel] {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0; }
+
+/* -----------------footer -----------------*/
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+  background-color: grey;
+  color: #E6E7E8; }
+
+.row-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto; }
+
+.space {
+  width: 15vw; }
+
+.colfoot {
+  line-height: 50%;
+  padding-right: 1vh; }
+
+/* ul style*/
+ul {
+  list-style-type: circle;
+  margin: 0;
+  padding: 5px; }
+
+.brand-footer {
+  height: 40px;
+  width: 167px; }
+
+/* On screens that are 800px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .row-rev .bow {
+    width: auto;
+    flex-direction: column; }
+
+  .bow img {
+    height: auto;
+    width: 100%;
+    max-width: 80vw; }
+
+  .col-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: none; }
+
+  .box-con {
+    border: none;
+    /*
+    flex: 80%;
+    margin-top: 10vh;
+    width: 100%;
+    text-align: center;
+    */ }
+
+  .row-footer {
+    flex-direction: column; }
+
+  .textblock {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto; } }
+
+/*# sourceMappingURL=style-css.map */

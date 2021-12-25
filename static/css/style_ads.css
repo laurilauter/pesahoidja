@@ -1,0 +1,640 @@
+/* CSS DEBUGGER 
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+
+*/
+/*COLORS*/
+/*navbar and (footer)*/
+/* background*/
+/*text colors*/
+/*fonts*/
+/*controls*/
+/*other stuff*/
+/*
+$border: 3px solid #577C3D;
+/*
+$testborder: 1px solid rgb(204, 31, 31);
+*/
+body {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
+
+* {
+  box-sizing: border-box; }
+
+h1 {
+  font-family: "Heebo", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400; }
+
+h2 {
+  font-family: "Heebo", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400; }
+
+h3 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400; }
+
+p, ul, a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem; }
+
+table {
+  width: 100%;
+  /*
+  border-bottom: 1px solid silver;
+  */
+  padding: 10px;
+  border-collapse: collapse;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem; }
+
+tr {
+  text-align: left;
+  padding: 5px; }
+
+th, td {
+  /*
+  width: 50%;
+  */
+  padding: 5px; }
+
+.right {
+  text-align: right; }
+
+.t-header {
+  /*
+  border: 1px solid silver;
+  */
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #58585B; }
+
+.mid-p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem; }
+
+.mid-p a {
+  color: #E6E7E8; }
+
+.small-p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8rem; }
+
+.bold {
+  font-weight: 600; }
+
+.bolder {
+  font-weight: 900; }
+
+.green {
+  color: #58585B; }
+
+a:link {
+  color: #58585B;
+  text-decoration: none; }
+
+a:hover {
+  color: grey;
+  text-decoration: none; }
+
+.desktop {
+  margin-top: 10px;
+  display: inline-block; }
+
+/* hide mobile version by default */
+.mobile {
+  display: none; }
+
+/* when screen is less than 700px wide
+  show mobile version and hide desktop */
+@media (max-width: 700px) {
+  .mobile {
+    margin-top: 6px;
+    margin-left: 3px;
+    display: inline-block; }
+
+  .desktop {
+    display: none; }
+
+  .hidable {
+    margin-top: 0px; }
+
+  /* Smaller fonts for mobile */
+  h1 {
+    font-size: 1.8rem; }
+
+  h2 {
+    font-size: 1.6rem; }
+
+  h3 {
+    font-size: 1.4rem; }
+
+  h4 {
+    font-size: 1.3rem; }
+
+  table {
+    font-size: 0.8rem; } }
+@media (max-width: 300px) {
+  table {
+    font-size: 0.6rem; } }
+/* NAVBAR */
+/* Add a background color to the top navigation */
+.topnav {
+  opacity: 1;
+  z-index: 1;
+  background-color: transparent;
+  overflow: hidden;
+  margin-top: 0px;
+  /*
+  padding-left: 5px;
+  */
+  position: absolute;
+  width: 100%;
+  /*
+  border-bottom: $border;
+  */ }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #E6E7E8;
+  text-align: center;
+  margin-right: 40px;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 1.6rem; }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: transparent;
+  color: #c4e3c0; }
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none; }
+
+.topnav a.icon .fa-times {
+  display: none; }
+
+#nav-forward {
+  display: none; }
+
+#nav-backward {
+  display: block; }
+
+/* When the screen is less than 800 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+  .topnav a {
+    display: none; }
+
+  .topnav a.icon {
+    margin-top: 3px;
+    margin-right: 3px;
+    /*
+    float: right;
+    */
+    display: block; } }
+/* The "responsive" class is added to the topnav with JavaScript 
+when the user clicks on the icon. This class makes the topnav 
+look good on small screens (display the links vertically instead 
+of horizontally) */
+@media screen and (max-width: 700px) {
+  .topnav.responsive {
+    position: absolute;
+    z-index: 1;
+    /*setting alpha = 0.1*/
+    background: rgba(200, 200, 200, 0.3); }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    margin-top: 3px;
+    margin-right: 3px;
+    right: 0;
+    top: 0; }
+
+  .topnav.responsive a.icon .fa-bars {
+    display: none; }
+
+  .topnav.responsive a.icon .fa-times {
+    display: block; }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-right: auto; }
+
+  .topnav.responsive a:hover {
+    color: #c4e3c0;
+    background: rgba(90, 125, 60, 0.5); }
+
+  .topnav {
+    z-index: 1;
+    margin-top: 0px;
+    background-color: transparent; }
+
+  .responsive-jumbo {
+    margin-top: 180px; }
+
+  #nav-forward {
+    display: block; }
+
+  #nav-backward {
+    display: none; } }
+/* jumbotron */
+.container-jumbo {
+  z-index: 0;
+  margin-top: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding: 5vh;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  background-image: url("../../static/img/pesahoidja_hero.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.h-color {
+  animation-name: example;
+  animation-duration: 2s;
+  opacity: 1;
+  color: #E6E7E8; }
+
+@keyframes example {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 1; } }
+.inner-jumbo {
+  color: #E6E7E8;
+  text-align: center;
+  z-index: 1; }
+
+.btn {
+  width: 100%;
+  margin-top: 10px;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #9CC182;
+  border: 1px solid #446130;
+  padding: 16px 32px;
+  text-decoration: none;
+  color: white; }
+
+.btn-jumbo {
+  width: fit-content; }
+
+.btn:hover {
+  background-color: #bae096; }
+
+.btn:active {
+  background-color: #c4e3c0; }
+
+/* ----------------------- TEENUSED------------------ */
+.container-teenused {
+  padding: 5vw;
+  background-color: whitesmoke;
+  flex-flow: column;
+  justify-content: center;
+  border: none;
+  border-bottom: none;
+  border-top: none; }
+
+.textblock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  border: none; }
+
+.textblock-inner {
+  text-align: center;
+  align-items: center;
+  max-width: 1400px;
+  border: none; }
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  border: none; }
+
+.bow {
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none; }
+
+.bob {
+  min-width: 200px;
+  padding: 2vw; }
+
+.slim {
+  max-width: 350px;
+  text-align: center; }
+
+.bob img {
+  height: auto;
+  width: 100%;
+  max-width: 300px; }
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border: none; }
+
+/* Create 2 equal columns */
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border: none; }
+
+.list {
+  text-align: left; }
+
+/* -------------- MEIST----------- */
+.container-meist {
+  padding-top: 5vh;
+  background-color: #E6F0E0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
+  border-bottom: none; }
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid silver; }
+
+.card img {
+  height: 100%;
+  width: auto; }
+
+.face {
+  object-fit: cover;
+  min-width: 250px;
+  width: 250px;
+  height: 300px; }
+
+/* Add some padding inside the card container */
+.container-card {
+  padding: 10px;
+  min-height: auto;
+  max-width: 250px; }
+
+.container-card h4 {
+  margin-top: 10px;
+  margin-bottom: 5px; }
+
+.row-card {
+  justify-content: space-evenly; }
+
+.col-card {
+  padding: 3vw;
+  text-align: center; }
+
+/* -----------------  kontakt -----------------*/
+.container-kontakt {
+  color: #58585B;
+  width: 100%;
+  padding-top: 15vh;
+  padding: 2vh;
+  background-color: whitesmoke; }
+
+.col-con {
+  padding: 1vh;
+  width: 60vh; }
+
+.box-con {
+  margin-top: 10vh;
+  vertical-align: middle;
+  border: none; }
+
+.kontakt {
+  width: 40vh; }
+
+.email .phone .fb {
+  font-size: 1.2em;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #58585B; }
+
+a {
+  color: #58585B; }
+
+/* form style */
+textarea {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid silver;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  padding: 12px 12px;
+  margin: 8px 0; }
+
+input[type=text], [type=email], [type=number], [type=tel] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid silver;
+  font-size: 1.2rem;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0; }
+
+  /*
+  .visible {
+    display: block;
+  }
+*/
+#form-info {
+  animation-name: info-animation;
+  animation-duration: 1s;
+  opacity: 0.1;
+  color: #9CC182;
+  text-align: center; }
+
+@keyframes info-animation {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 1; } }
+/* -----------------footer -----------------*/
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 5vh;
+  background-color: #58585B;
+  color: #E6E7E8;
+  border-top: none; }
+
+.row-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.logo {
+  margin-top: 28px;
+  margin-right: 5vw;
+  min-width: 200px; }
+
+.address {
+  margin-top: 0px;
+  min-width: 200px; }
+
+/* ul style*/
+ul {
+  margin: 0;
+  padding: 5px; }
+
+.brand-footer {
+  height: 40px;
+  width: 167px; }
+
+.container-small {
+  text-align: center; }
+
+/* On screens that are 800px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .row-rev .bow {
+    width: auto;
+    flex-direction: column; }
+
+  .bow img {
+    height: auto;
+    width: 100%; }
+
+  .col-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: none; }
+
+  .box-con {
+    border: none; }
+
+  .row-footer {
+    flex-direction: column; }
+
+  .textblock {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto; }
+
+  .card {
+    flex-direction: column; } }
+.pointer {
+  cursor: pointer; }
+
+/*    MODAL        */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  padding-left: 40px;
+  border: 1px solid #58585B;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+/* The Close Button */
+.close {
+  color: #58585B;
+  float: right;
+  font-size: 36px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+/*  inADS style   */
+.inAdsCopyright {
+  display: none; }
+
+/*
+.inaadressSearchContainer {
+
+}
+*/
+.inaadressSearchContainer {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid silver;
+  font-size: 1.2rem;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0; }
+
+/*# sourceMappingURL=style_ads.css.map */
